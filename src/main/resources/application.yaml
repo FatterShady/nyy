@@ -1,0 +1,22 @@
+
+server:
+  port: 8081
+
+
+spring:
+      datasource:
+        url: jdbc:mysql://localhost:3306/nyy?characterEncoding=utf8&amp;useSSL=false
+        username: root
+        password: wxr.1005
+        driver-class-name: com.mysql.jdbc.Driver
+      servlet:
+        multipart:
+          max-file-size: 100MB
+          max-request-size: 100MB
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.nyy.boot.bean
+  configuration:
+    map-underscore-to-camel-case: true
+
